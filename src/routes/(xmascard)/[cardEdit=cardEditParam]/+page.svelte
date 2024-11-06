@@ -5,12 +5,17 @@
 	let { data } = $props();
 </script>
 
-
 <article>
-	<div>
-		<a href="/">Back</a>
-		<a href="/{data.key}">Go to card</a>
-	</div>
+	<nav>
+		<ul>
+			<li><a href="/">Back</a></li>
+			{#if data.key}
+				<li>
+					<a href="/{data.key}">Go to card</a>
+				</li>
+			{/if}
+		</ul>
+	</nav>
 
 	{#if data.key}
 		<h1>Sprinkle some more x-mas spirit on dat!</h1>
@@ -18,6 +23,7 @@
 	{:else}
 		<h1>Create a new xmas card!</h1>
 	{/if}
+
 	<form
 		use:enhance
 		action="?/{data.key ? 'editcard' : 'createcard'}"
@@ -33,10 +39,11 @@
 </article>
 
 <style>
-	div {
+	ul {
 		display: flex;
 		justify-content: space-between;
 	}
+
 	article {
 		flex-grow: 1;
 		display: flex;

@@ -1,7 +1,7 @@
 <script>
 	import '../global.css';
-
 	import Snowfall from '$lib/components/snow/Snowfall.svelte';
+	import Countdown from '$lib/components/countdown/Countdown.svelte';
 	import Tree from '$lib/components/Tree.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
@@ -14,6 +14,7 @@
 <Tree />
 
 <main>
+<Countdown />
 	{@render children?.()}
 </main>
 

@@ -72,7 +72,7 @@ export const actions: Actions = {
 			fail(400, { message: 'Invalid title' });
 		}
 
-		const res = await db
+		await db
 			.update(cardTable)
 			.set({
 				cardTitle: title,

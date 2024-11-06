@@ -19,6 +19,7 @@ export const addToCookieStore = (
 type StoredCard = {
 	title: string;
 	key: string;
+	views: number;
 };
 
 export const getCookieStore = (

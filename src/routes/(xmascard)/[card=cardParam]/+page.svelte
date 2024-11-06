@@ -1,12 +1,11 @@
 <script>
+	import Card from '$lib/components/card/Card.svelte';
 	import Envelope from '$lib/components/Envelope.svelte';
 	export let data;
 </script>
 
 <div class="container">
-	<Envelope>
-		<h1>{data.title}</h1>
-		<p>{data.message}</p>
+<Card title={data.title} message={data.message} visits={data.views} />
 	</Envelope>
 </div>
 

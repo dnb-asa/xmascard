@@ -1,6 +1,8 @@
 <script lang="ts">
 	let { data } = $props();
+	console.log(data)
 </script>
+
 
 {#snippet deleter(key: string)}
 	<form action="?/forgetcard" method="POST">
@@ -16,11 +18,12 @@
 		<section>
 			<h1>Known lists</h1>
 			<ul>
-				{#each data.cards as { title, key }}
+				{#each data.cards as { title, views, key }}
 					<li>
 						<a href="/{key}">
 							{title}
 						</a>
+						<p>{views}</p>
 						{@render deleter(key)}
 					</li>
 				{/each}
@@ -28,29 +31,35 @@
 		</section>
 	{/if}
 </article>
-
 <style>
 	article {
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		color: blue;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 	}
 	article > a {
-		background-color: aliceblue;
-		padding: 1rem;
-		border-radius: 1rem;
+			background-color: aliceblue;
+			padding: 1rem;
+			border-radius: 1rem;
+			color: blue;
 	}
 
 	ul {
-		display: flex;
-		flex-direction: column;
+			display: flex;
+			flex-direction: column;
+			color: blue;
 	}
 
 	li {
-		display: flex;
-		justify-content: space-between;
-		background-color: aliceblue;
+			display: flex;
+			justify-content: space-between;
+			align-items: center; 
+			background-color: white;
+	}
+
+
+	li p {
+			margin: 0;
 	}
 </style>

@@ -10,7 +10,7 @@ pnpm run dev
 
 # in root ".env" file (create if not exist)
 # you also need a postgres db set up and a connection string...
-DATABASE_URL=<...some long connections string...>
+DATABASE_URL
 ```
 
 Framework: [svelte](https://svelte.dev/)\

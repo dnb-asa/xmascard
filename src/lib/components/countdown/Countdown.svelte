@@ -26,7 +26,6 @@
 		return () => clearInterval(interval);
 	});
 </script>
-
 <div class="countdown">
 	Christmas Countdown: {countdown}
 </div>

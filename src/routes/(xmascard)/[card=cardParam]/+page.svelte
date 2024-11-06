@@ -1,7 +1,6 @@
-<script> 
-	export let data
+<script>
+	import Card from '$lib/components/card/Card.svelte';
+	export let data;
 </script>
 
-<h1>{data.title}</h1>
-<p>{data.message}</p>
-<p>{data.views +1}</p>
+<Card title={data.title} message={data.message} visits={data.views} />

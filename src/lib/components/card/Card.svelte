@@ -16,9 +16,18 @@
 		rotateX = ((event.clientY - centerY) / centerY) * tiltDegree;
 		rotateY = ((event.clientX - centerX) / centerX) * tiltDegree;
 	};
+
+	const resetMouseMove = () => {
+		rotateX = 0;
+		rotateY = 0;
+	};
 </script>
 
-<section aria-label="img" on:mousemove={handleMouseMove}>
+<section
+	aria-label="img"
+	on:mousemove={handleMouseMove}
+	on:mouseleave={resetMouseMove}
+>
 	<div style="transform: rotateX({rotateX}deg) rotateY({rotateY}deg);">
 		<h1>{title}</h1>
 		<p>{message}</p>
@@ -28,11 +37,6 @@
 
 <style>
 	section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
 		perspective: 1000px;
 	}
 
@@ -41,9 +45,8 @@
 		background-color: #f9f9f9;
 		border-radius: 1rem;
 		padding: 2em;
-	}
-
-	p {
+		transition: transform 200ms ease-out;
+		transform-style: preserve-3d;
 		text-align: center;
 	}
 </style>

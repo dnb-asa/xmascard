@@ -22,6 +22,10 @@
 		background-color: rgb(185, 64, 64);
 		position: relative;
 		overflow: visible;
+
+		padding: 1rem;
+
+		margin: auto;
 	}
 
 	button {
@@ -29,6 +33,9 @@
 		display: block;
 		position: absolute;
 		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 
 		width: 100%;
 		height: 100%;
@@ -43,7 +50,12 @@
 
 	div {
 		opacity: 0;
-		transition: 0.5s;
+		transition: all 0.5s;
+	}
+
+	:not(.showCard) div {
+		pointer-events: none;
+		transform: scale(0.9) translateY(10px);
 	}
 
 	.showCard div {

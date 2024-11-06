@@ -7,14 +7,10 @@
 
 <article>
 	<nav>
-		<ul>
-			<li><a href="/">Back</a></li>
-			{#if data.key}
-				<li>
-					<a href="/{data.key}">Go to card</a>
-				</li>
-			{/if}
-		</ul>
+		<a href="/">Back</a>
+		{#if data.key}
+			<a href="/{data.key}">Go to card</a>
+		{/if}
 	</nav>
 
 	{#if data.key}
@@ -39,7 +35,7 @@
 </article>
 
 <style>
-	ul {
+	nav {
 		display: flex;
 		justify-content: space-between;
 	}

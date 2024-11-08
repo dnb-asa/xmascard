@@ -1,6 +1,7 @@
-# Mallsoft xmas project turbo mode
+# DNB xmas project 
 
-![Screenshot](screen.jpg)
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/90786925-a44d-4f26-8d7c-5a67cccc0d14">
+
 
 ## Developing
 
@@ -9,8 +10,7 @@ pnpm i
 pnpm run dev
 
 # in root ".env" file (create if not exist)
-# you also need a postgres db set up and a connection string...
-DATABASE_URL
+# you also need a postgres db set up and a connection string... and put that in the .env DATABASE_URL="_that_connection_string_"
 ```
 
 Framework: [svelte](https://svelte.dev/)\
